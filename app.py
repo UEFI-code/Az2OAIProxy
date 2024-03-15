@@ -12,7 +12,7 @@ def send_post_request(url, headers, data):
 
 app = Flask(__name__)
 
-@app.route('/chat/model_name', methods=['POST'])
+@app.route('/chat/<model_name>', methods=['POST'])
 def forward(model_name):
     # Get the POST request JSON headers and data
     headers = request.headers
