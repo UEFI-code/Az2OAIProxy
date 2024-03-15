@@ -29,7 +29,7 @@ def forward(Model):
         'stop': data['stop']
     }
 
-    return send_post_request('https://api.openai.com/v1/chat/completions', new_headers, new_data)
+    return send_post_request('https://api.openai.com/v1/chat/completions', new_headers, new_data.encode('utf-8'))
 
 if __name__ == '__main__':
     app.run()
