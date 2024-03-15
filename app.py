@@ -8,7 +8,7 @@ def send_post_request(url, headers, data):
     conn = http.client.HTTPSConnection(url.split('/')[2])
     conn.request("POST", url, data, headers)
     response = conn.getresponse()
-    return response.read().decode('utf-8')
+    return response.read().decode('utf-8'), response.status
 
 app = Flask(__name__)
 
@@ -23,7 +23,7 @@ def forward(Model):
     }
     new_data = {
         'model': Model,
-        'message': data['message'],
+        'messages': data['message'],
         'max_tokens': data['max_tokens'],
         'temperature': data['temperature'],
         'top_p': data['top_p'],
