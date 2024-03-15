@@ -43,6 +43,12 @@
 
     なお、`your_domain_or_IP`は適切なドメイン名またはIPアドレスに置き換えてください。
 
+    もし、HTTPSを使用欲しい場合は、certbotを使用ください。
+
+    ```bash
+    sudo certbot --nginx
+    ```
+
 ## 使用方法
 
 POSTリクエストを`/chat/<model_name>`エンドポイントに送信します。リクエストヘッダーには`api-key`を含め、リクエストボディには`message`、`max_tokens`、`temperature`、`top_p`を含めます。
