@@ -33,7 +33,7 @@ def forward(model_name):
         'stop': data['stop']
     }
 
-    print(f'Headers: {new_headers}, Data: {new_data}')
+    #print(f'Headers: {new_headers}, Data: {new_data}')
 
     return send_post_request('https://api.openai.com/v1/chat/completions', new_headers, jsonEncoder.encode(new_data))
 
