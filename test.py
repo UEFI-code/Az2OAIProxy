@@ -7,7 +7,7 @@ test_headers = {
     "api-key": "Key123",
 }
 test_data = {
-    "message": [{'role': 'user', 'content': 'Hello!'}],
+    "messages": [{'role': 'user', 'content': 'Hello!'}],
     "max_tokens": 100,
     "temperature": 0.7,
     "top_p": 1,

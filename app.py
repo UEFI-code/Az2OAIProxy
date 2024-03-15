@@ -24,7 +24,7 @@ def forward(model_name):
     }
     new_data = {
         'model': model_name,
-        'messages': data['message'],
+        'messages': data['messages'],
         'max_tokens': data['max_tokens'],
         'temperature': data['temperature'],
         'top_p': data['top_p'],
